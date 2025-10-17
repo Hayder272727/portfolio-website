@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hayder Hasan | Portfolio</title>
+  <meta name="description" content="Portfolio website for Hayder Hasan">
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- Google Font: Poppins (أنيق وبسيط) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="site-header container">
+    <div class="brand">Hayder Hasan</div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact" class="btn">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero container">
+    <div class="hero-text">
+      <h1>Hi, I'm Hayder 👋</h1>
+      <p class="lead">
+        Cybersecurity student & junior front-end learner. I build clean, responsive pages using HTML & CSS.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn">See My Work</a>
+        <a href="https://github.com/hayder272727" target="_blank" class="btn-ghost">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <!-- غيّر المسار حسب مكان الصورة -->
+      <img src="assets/img/profile.png" alt="Hayder Hasan profile">
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section container">
+    <h2>About Me</h2>
+    <p>
+      I’m Hayder Hasan, a Cybersecurity student with prior experience in IT systems and network administration.
+      I enjoy learning by building small practical projects and keeping my code simple and readable.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section container">
+    <h2>Skills</h2>
+    <ul class="skills">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>Responsive Design</li>
+      <li>Git & GitHub</li>
+      <li>Networking Basics (LAN/WAN/VPN)</li>
+      <li>Cybersecurity Fundamentals</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section container">
+    <h2>Projects</h2>
+    <div class="grid">
+      <!-- Project 1 -->
+      <article class="card">
+        <div class="thumb thumb-a"></div>
+        <div class="card-body">
+          <h3>Image Overlay Effect</h3>
+          <p>Simple hover overlay with fade-in text using HTML & CSS.</p>
+          <div class="links">
+            <a target="_blank" href="https://github.com/hayder272727/html-and-css">Code</a>
+          </div>
+        </div>
+      </article>
+      <!-- Project 2 -->
+      <article class="card">
+        <div class="thumb thumb-b"></div>
+        <div class="card-body">
+          <h3>Video Background</h3>
+          <p>Autoplay muted loop background with centered text overlay.</p>
+          <div class="links">
+            <a target="_blank" href="https://github.com/hayder272727/html-and-css">Code</a>
+          </div>
+        </div>
+      </article>
+      <!-- Project 3 -->
+      <article class="card">
+        <div class="thumb thumb-c"></div>
+        <div class="card-body">
+          <h3>Media Query Demo</h3>
+          <p>Paragraph color changes under 600px to practice responsive design.</p>
+          <div class="links">
+            <a target="_blank" href="https://github.com/hayder272727/html-and-css">Code</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume" class="section container">
+    <h2>Resume</h2>
+    <p>You can view or download my current resume here.</p>
+    <a class="btn" href="Hayder-Hasan-Resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+  </section>
+
+  <!-- Contact (Formspree) -->
+  <section id="contact" class="section container">
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/xrbyjrvr" method="POST" class="contact-form">
+      <div class="field">
+        <label for="name">Your Name</label>
+        <input id="name" name="name" type="text" required />
+      </div>
+      <div class="field">
+        <label for="email">Your Email</label>
+        <input id="email" name="_replyto" type="email" required />
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button class="btn" type="submit">Send</button>
+      <p class="hint">Powered by Formspree</p>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer container">
+    <p>© <span id="year"></span> Hayder Hasan • <a target="_blank" href="https://github.com/hayder272727">GitHub</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
