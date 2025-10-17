@@ -1,0 +1,79 @@
+:root {
+  --bg: #0b0c10;
+  --card: #15171c;
+  --text: #e6e6e6;
+  --muted: #9aa0a6;
+  --brand: #5eead4; /* teal */
+  --accent: #60a5fa; /* blue */
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(1200px 600px at 10% -10%, #122 0%, var(--bg) 60%);
+}
+
+/* Layout helpers */
+.container { width: min(1100px, 92%); margin: 0 auto; }
+.section { padding: 64px 0; }
+
+/* Header */
+header {
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 18px 0;
+}
+.brand { font-weight:700; letter-spacing:.5px; }
+nav a { color: var(--text); text-decoration:none; margin-left:16px; }
+nav a:hover { color: var(--brand); }
+.btn {
+  padding:10px 16px; border-radius:12px; background: var(--brand); color:#062c2b;
+  font-weight:600; text-decoration:none; display:inline-block;
+}
+
+/* Hero */
+.hero { display:grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items:center; padding: 40px 0 16px; }
+.hero h1 { font-size: clamp(28px, 3.6vw, 44px); margin: 0 0 10px; }
+.hero p { color: var(--muted); margin: 0 0 18px; }
+.hero-media img, .hero-media video {
+  width: 100%; height: 320px; object-fit: cover; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,.35);
+}
+
+/* About */
+.badges { list-style:none; padding:0; margin:18px 0 0; display:flex; flex-wrap:wrap; gap:10px; }
+.badges li { background: var(--card); padding:8px 12px; border-radius: 999px; border:1px solid #222; }
+
+/* Projects */
+.grid {
+  display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+}
+.card { background: var(--card); border: 1px solid #20222a; border-radius:16px; overflow:hidden; }
+.card img { width:100%; height:160px; object-fit:cover; display:block; }
+.card-body { padding:14px; }
+.card h3 { margin: 6px 0 6px; font-size: 18px; }
+.card p { margin: 0 0 10px; color: var(--muted); }
+.card .links a { color: var(--accent); text-decoration:none; font-weight:600; }
+.card .links a:hover { text-decoration: underline; }
+
+/* Contact */
+.contact-form { background: var(--card); border:1px solid #20222a; border-radius:16px; padding:18px; }
+.field { margin-bottom:12px; }
+label { display:block; margin-bottom:6px; color:#cfd3d7; }
+input, textarea {
+  width:100%; padding:10px 12px; border-radius:10px; border:1px solid #2a2d36; background:#101216; color:#e8eaed;
+}
+.hint { color: var(--muted); font-size: 12px; }
+
+/* Footer */
+.footer { padding: 28px 0 40px; color: #98a2ad; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  nav a:not(.btn) { display:none; } /* بس زر GitHub يبقى */
+  .grid { grid-template-columns: 1fr; }
+}
