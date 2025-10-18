@@ -1,8 +1,7 @@
-/* ====== GENERAL STYLING ====== */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #d8ecf3; /* خلفية سماوية فاتحة */
+  background-color: #d8ecf3;
   color: #1b1b1b;
   line-height: 1.6;
 }
@@ -13,7 +12,7 @@ body {
   margin: 0 auto;
 }
 
-/* ====== HEADER ====== */
+/* Header */
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -71,7 +70,7 @@ body {
   color: white;
 }
 
-/* ====== HERO SECTION ====== */
+/* Hero */
 .hero {
   display: flex;
   align-items: center;
@@ -105,23 +104,23 @@ body {
   align-items: center;
 }
 
-/* الصورة الشخصية */
+/* Profile Picture */
 .profile-pic {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  object-fit: cover; /* يخلي الوجه يظهر كامل */
-  object-position: top center;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  object-position: center top;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-pic:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.4);
 }
 
-/* ====== SECTIONS ====== */
+/* Section */
 .section {
   padding: 3rem 0;
   border-bottom: 1px solid #a8d0e6;
@@ -132,7 +131,7 @@ body {
   margin-bottom: 1rem;
 }
 
-/* ====== SKILLS ====== */
+/* Skills */
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -148,7 +147,7 @@ body {
   font-weight: 500;
 }
 
-/* ====== PROJECT CARDS ====== */
+/* Projects */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -180,7 +179,7 @@ body {
   color: #023047;
 }
 
-/* ====== CONTACT FORM ====== */
+/* Contact */
 .contact-form {
   background: #f0f9ff;
   padding: 2rem;
@@ -212,7 +211,7 @@ input:focus, textarea:focus {
   border-color: #0077b6;
 }
 
-/* ====== FOOTER ====== */
+/* Footer */
 .footer {
   text-align: center;
   padding: 2rem 0;
